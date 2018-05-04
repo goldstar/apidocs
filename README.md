@@ -51,11 +51,11 @@ JSON: `https://www.goldstar.com/api/categories.json?api_key=<api_key>`
 XML: `https://www.goldstar.com/api/categories.xml?api_key=<api_key>`
 
 
-####Example Request:
+#### Example Request:
 
 	https://www.goldstar.com/api/categories.json?api_key=<api_key>
 
-####Response Document:
+#### Response Document:
 
 | Property     | Type          | Description  |
 | ------------ | ------------- | ------------ | 
@@ -77,11 +77,11 @@ XML: `https://www.goldstar.com/api/territories.xml?api_key=<api_key>`
 
 The response will include each Territory’s ID, name, slug, initials and time zone.
 
-####Example Request:
+#### Example Request:
 
 	https://www.goldstar.com/api/territories.json?api_key=<api_key>
 
-####Response Document:
+#### Response Document:
 
 | Property     | Type          | Description  |
 | ------------ | ------------- | ------------ | 
@@ -106,7 +106,7 @@ JSON: `https://www.goldstar.com/api/listings.json?api_key=<api_key>`
 
 XML: `https://www.goldstar.com/api/listings.xml?api_key=<api_key>`
 
-####Response Document:
+#### Response Document:
 
 | Property     | Type          | Description  |
 | ------------ | ------------- | ------------ | 
@@ -165,7 +165,7 @@ The feed contains every event (that meets the filters provided) in its current s
 The feed returns events in order of popularity, with the most popular events listed first.
 
 
-####Parameters:
+#### Parameters:
 
 
 You can tailor the results of the feed by passing parameters into the URL.  This will allow you to obtain events for a particular Territory, Category, date range, etc.  To create the parameter string, each parameter key and value should be encoded using the equals character (“=”) to create a key/value pair.  All key/value pairs should be concatenated together with the ampersand character (“&”).
@@ -181,14 +181,14 @@ You can tailor the results of the feed by passing parameters into the URL.  This
 | page & per_page | integers | These parameters can be used together to paginate the feed.  Use per_page to specify the number of events per page and page to specify the page
 
 
-####Example Request:
+#### Example Request:
 
 The top Concert event in Los Angeles:
 
 	https://www.goldstar.com/api/listings.xml?api_key=<api_key>&territory_id=1&category_id=66&limit=1
 
 
-####Example Response:
+#### Example Response:
 	
 	<listings>
 		<event id="122129">
