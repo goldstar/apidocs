@@ -21,11 +21,14 @@ Occasionally, we’re able to customize our API to fit the specific needs of our
 
 ## Authentication
 
-All requests to the Goldstar Developer API require a valid API key. If you have not yet obtained an API key, you can request one by [emailing us](partnerships@goldstar.com).  To authenticate your request, you’ll need to add your API key to the end of any valid URL. For example: `https://www.goldstar.com/api/territories.json?api_key=<api_key>`
+All requests to the Goldstar Developer API require a valid API key. If you have not yet obtained an API key, you can request one by [emailing us](partnerships@goldstar.com).  To authenticate your request, you’ll need to add your API key as a Bearer token to the `Authentication` HEADER of your request. Here is an example:
 
+```
+curl -i 'https://www.goldstar.com/api/territories.json' \
+  -H "Authorization: Bearer token=<api_key goes here>"
+```
 
 In addition, you’ll need an Affiliate ID in order to generate unique tracking links and get credit for the traffic you send to us. If you haven’t yet received an Affiliate ID, apply at <https://affiliates.goldstar.com/signup>.  
-
 
 
 ## Concepts
@@ -46,14 +49,17 @@ The Category reflects  content (e.g. "Theatre"), context (e.g. "Good for Groups"
 
 To obtain Goldstar’s current list of Categories, use the Categories Call:
 
-JSON: `https://www.goldstar.com/api/categories.json?api_key=<api_key>`
+JSON:
+```
+curl -i 'https://www.goldstar.com/api/categories.json' \
+  -H "Authorization: Bearer token=<api_key goes here>"
+```
 
-XML: `https://www.goldstar.com/api/categories.xml?api_key=<api_key>`
-
-
-#### Example Request:
-
-	https://www.goldstar.com/api/categories.json?api_key=<api_key>
+XML:
+```
+curl -i 'https://www.goldstar.com/api/categories.xml' \
+  -H "Authorization: Bearer token=<api_key goes here>"
+```
 
 #### Response Document:
 
@@ -71,15 +77,19 @@ Once you have information about Goldstar’s current Categories, you can use the
 
 To obtain Goldstar’s current list of Territories, use the Territories Call:
 
-JSON: `https://www.goldstar.com/api/territories.json?api_key=<api_key>`
+JSON:
+```
+curl -i 'https://www.goldstar.com/api/territories.json' \
+  -H "Authorization: Bearer token=<api_key goes here>"
+```
 
-XML: `https://www.goldstar.com/api/territories.xml?api_key=<api_key>`
+XML:
+```
+curl -i 'https://www.goldstar.com/api/territories.xml' \
+  -H "Authorization: Bearer token=<api_key goes here>"
+```
 
 The response will include each Territory’s ID, name, slug, initials and time zone.
-
-#### Example Request:
-
-	https://www.goldstar.com/api/territories.json?api_key=<api_key>
 
 #### Response Document:
 
@@ -102,9 +112,17 @@ The primary feed partners take advantage of Goldstar’s Listings Call.  By acce
 
 Basic Listings Call: 
 
-JSON: `https://www.goldstar.com/api/listings.json?api_key=<api_key>`
+JSON:
+```
+curl -i 'https://www.goldstar.com/api/listings.json' \
+  -H "Authorization: Bearer token=<api_key goes here>"
+```
 
-XML: `https://www.goldstar.com/api/listings.xml?api_key=<api_key>`
+XML:
+```
+curl -i 'https://www.goldstar.com/api/listings.xml' \
+  -H "Authorization: Bearer token=<api_key goes here>"
+```
 
 #### Response Document:
 
@@ -185,7 +203,10 @@ You can tailor the results of the feed by passing parameters into the URL.  This
 
 The top Concert event in Los Angeles:
 
-	https://www.goldstar.com/api/listings.xml?api_key=<api_key>&territory_id=1&category_id=66&limit=1
+```
+curl -i 'https://www.goldstar.com/api/listings.xml?territory_id=1&category_id=66&limit=1' \
+  -H "Authorization: Bearer token=<api_key goes here>"
+```
 
 
 #### Example Response:
@@ -331,5 +352,3 @@ Cropped image:
 ## Support
 
 If you have any questions or need any help with the Goldstar Developer API, or [email us](partnerships@goldstar.com) and we’ll get back to you as soon as possible.
-
-
