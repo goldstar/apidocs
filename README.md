@@ -1,4 +1,4 @@
-![Goldstar icon](https://i.gse.io/frontend/company/image_assets/goldstar-logo-blue-on-white-small.png)
+![Goldstar icon](https://res.cloudinary.com/goldstar/image/upload/e_colorize,co_rgb:fec200,w_300/v1542129455/Goldstar_HorizontalLockup_Black.png)
 # Goldstar Developer API
 
 
