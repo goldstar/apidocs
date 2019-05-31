@@ -1,4 +1,4 @@
-![Goldstar icon](https://i.gse.io/frontend/company/image_assets/goldstar-logo-blue-on-white-small.png)
+![Goldstar icon](https://i.gse.io/new_images/goldstar-logo.svg)
 # Goldstar Developer API
 
 
